@@ -1,0 +1,41 @@
+.login-container-callout {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #0C0C0C;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.login-container {
+    border-left-color: #FFC200;
+    background-color: #0C0C0C; 
+}
+
+.login-container p {
+  font-style: italic;
+}   
+
+.light-text {
+  color: white;
+}
+
+.light-text-info {
+  color: red;
+}
+
+.login-input {            
+    border: 1px solid #FFC200;
+    background-color: #0C0C0C; 
+    border-radius: 3px;
+    border-left: 6px solid #FFC200;
+}
+
+.login-button{
+  background-color: #FFC200;
+  font-weight: bold; 
+}
+
+.alert-error{
+  padding: 8px; 
+  margin-top: 5px;  
+}

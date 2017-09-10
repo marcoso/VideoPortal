@@ -1,0 +1,3 @@
+<button class="btn logout-button pull-right" [@resizeAnimation]="triggerAnimation" (click)="logout()" *ngIf="authService.isLoggedIn()"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><strong> Logout</strong></button>
+<p class="username-text pull-right" [@resizeAnimation]="triggerAnimation">{{userDisplayName}}</p>  		  		
+<router-outlet></router-outlet>

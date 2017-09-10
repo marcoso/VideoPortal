@@ -1,0 +1,24 @@
+<button class="btn back-button pull-left" routerLink='/videoList' routerLinkActive="active" [@resizeAnimation]="triggerAnimation">
+	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><strong> Back to list</strong>
+</button>
+<div class="row video-list-container" [@resizeAnimation]="triggerAnimation">
+	<div *ngFor="let video of videos" class="col-xs-12 col-sm-12 col-md-12">	
+		<div class="thumbnail video-item caption">			
+		  <div >
+		    <h4 class="light-text text-center">{{video.name}}</h4>        		   	    
+		  </div>
+		  <div class="col-xs-12 col-sm-12 col-md-12">				  
+		    <video class="col-xs-12 col-sm-12 col-md-12 bottom-space" controls>
+				<source [src]="'../../../'+ video.url" type="video/mp4"/>
+			</video>		    
+		  </div>
+		  <div>		    		   	
+		    <p>Video Rating</p>	
+		   	<rating-component [rating]='video.totalRating' (ratingClicked)="onRating($event)" [videoId]='video.id'></rating-component>				
+		  </div>
+		  <div>		    
+		    <p>{{ video.description }}</p>		    
+		  </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+.video-list-container {    
+    margin-top: 50px;
+}
+
+.video-item{    
+    background-color: #0C0C0C;    
+    border: none;
+    border-color: #FFC200;    
+    border-radius: 4px;    
+}
+
+.video-item-caption{        
+    min-height: 650px;    
+}
+
+.video-item-container {    
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.light-text {
+  color: white;
+}
+
+.video-item p{
+  color: white;
+  margin: 10px; 
+}
+
+.video-item a{
+  color: #FFC200; 
+}
+
+.bottom-space{
+  margin-bottom: 20px;
+}
+
+.back-button{
+	background-color: #FFC200;
+}

@@ -1,0 +1,14 @@
+<div class="row video-list-container search-results" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()" [@resizeAnimation]="triggerAnimation">	
+	<div *ngFor="let video of videos" class="col-xs-12 col-sm-4 col-md-4">	
+		<div class="thumbnail video-item" (click)="tileClick(video.id)">			
+		  <div class="caption video-item-caption">
+		    <h4 class="text-center"><a routerLink='/videoDetail/{{video.id}}' routerLinkActive="active" class="light-text">{{video.name | truncate : [23, '...'] }}</a></h4>        
+				<video controls width="100%" height="230" id="mp" #movieplayer (play)="onPlay($event)">
+					<source [src]="'../../../'+ video.url" type="video/mp4"/>
+				</video>
+			<rating-component [rating]='video.totalRating' (ratingClicked)="onRating($event)" [videoId]='video.id'></rating-component>
+		    <p>{{ video.description | truncate : [120, '...'] }}</p>		    
+		  </div>
+		</div>
+	</div>
+</div>

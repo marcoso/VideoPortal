@@ -1,0 +1,26 @@
+<div class="login-container login-container-callout">
+	<h3 class="light-text">Login</h3>
+	<p class="light-text">Welcome! To gain access to our video site please log in</p>
+</div>  
+<div class="panel-body">  	     
+	<div class="row">
+		<div class="form-group col-sm-5 col-md-4">		    
+		    <input [(ngModel)]="loginInfo.username" id="name" name="name" type="text" class="form-control login-input light-text" placeholder="enter username..." required #name="ngModel">	    	        
+		    <div [hidden]="name.valid" class="alert alert-danger alert-error col-xs-9 col-sm-9 col-md-9" role="alert">
+	  			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  				User name is required
+        	</div>
+	  	</div>	  		  	
+	</div>     
+	<div class="row">
+		<div class="form-group col-sm-5 col-md-4">		    
+		    <input [(ngModel)]="loginInfo.password" id="password" name="password" type="password" class="form-control login-input light-text" placeholder="enter password..." required #password="ngModel">
+		    <div [hidden]="password.valid" class="alert alert-danger alert-error col-xs-9 col-sm-9 col-md-9" role="alert">
+		    	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	          	Password is required
+	        </div>
+	  	</div>
+	</div> 	
+	<p class="text-danger"><strong>{{loginMessage}}</strong></p>	
+  	<button (click)="login()" class="btn waves-effect waves-light login-button" name="login" [disabled]="!name.valid || !password.valid"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</button>   
+</div>
